@@ -1,0 +1,6 @@
+{
+  "name": "Premium Education Consultancy",
+  "description": "Official website for Premium Education Consultancy — trusted overseas education counselling, global university admissions, scholarships, visa assistance, and English language training in Sri Lanka.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
