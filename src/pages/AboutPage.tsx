@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { PageRoute } from '../types';
 import { BRAND_INFO, OFFICES } from '../data/consultancyData';
+import { IMAGES } from '../assets/images';
 
 interface AboutPageProps {
   onNavigate: (route: PageRoute, slug?: string) => void;
@@ -48,7 +49,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConsulta
           <div className="lg:col-span-6 relative">
             <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-900">
               <img
-                src="/src/assets/images/about_consultancy_counseling_1791560255172.jpg"
+                src={IMAGES.about}
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (target.src !== IMAGES.fallbacks.about) {
+                    target.src = IMAGES.fallbacks.about;
+                  }
+                }}
                 alt="Advisory counseling session at Premium Education"
                 className="w-full h-[440px] object-cover"
                 referrerPolicy="no-referrer"

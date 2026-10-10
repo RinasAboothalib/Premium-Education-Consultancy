@@ -75,6 +75,12 @@ export const DestinationsPage: React.FC<DestinationsPageProps> = ({
             <div className="lg:col-span-5 relative min-h-[340px] lg:min-h-[480px]">
               <img
                 src={currentDest.image}
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('destination')) {
+                    target.src = '/images/destination_uk_campus_1791560270604.jpg';
+                  }
+                }}
                 alt={`Campus in ${currentDest.country}`}
                 className="absolute inset-0 w-full h-full object-cover"
                 referrerPolicy="no-referrer"

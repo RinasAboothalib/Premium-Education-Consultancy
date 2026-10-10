@@ -22,6 +22,7 @@ import {
   MapPin
 } from 'lucide-react';
 import { PageRoute } from '../types';
+import { IMAGES } from '../assets/images';
 import { 
   BRAND_INFO, 
   SERVICES, 
@@ -124,7 +125,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConsultati
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group">
                 <img
-                  src="/src/assets/images/hero_international_students_1791560239292.jpg"
+                  src={IMAGES.hero}
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (target.src !== IMAGES.fallbacks.hero) {
+                      target.src = IMAGES.fallbacks.hero;
+                    }
+                  }}
                   alt="International university students on campus"
                   className="w-full h-[400px] sm:h-[480px] object-cover group-hover:scale-102 transition-transform duration-700 ease-out"
                   referrerPolicy="no-referrer"
@@ -164,7 +171,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConsultati
             <div className="lg:col-span-5 order-2 lg:order-1">
               <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-slate-100">
                 <img
-                  src="/src/assets/images/about_consultancy_counseling_1791560255172.jpg"
+                  src={IMAGES.about}
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (target.src !== IMAGES.fallbacks.about) {
+                      target.src = IMAGES.fallbacks.about;
+                    }
+                  }}
                   alt="Personalized university admissions counselling at Premium Education"
                   className="w-full h-[380px] object-cover"
                   referrerPolicy="no-referrer"
@@ -445,7 +458,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConsultati
               <div className="lg:col-span-5">
                 <div className="rounded-2xl overflow-hidden border-2 border-white/20 shadow-lg">
                   <img
-                    src="/src/assets/images/ielts_language_academy_1791560293468.jpg"
+                    src={IMAGES.ielts}
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (target.src !== IMAGES.fallbacks.ielts) {
+                        target.src = IMAGES.fallbacks.ielts;
+                      }
+                    }}
                     alt="IELTS classroom learning at Premium Education"
                     className="w-full h-56 object-cover"
                     referrerPolicy="no-referrer"

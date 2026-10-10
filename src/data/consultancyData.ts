@@ -1,4 +1,5 @@
 import { DestinationItem, OfficeLocation, ServiceItem, TestimonialItem } from '../types';
+import { IMAGES } from '../assets/images';
 
 export const BRAND_INFO = {
   name: 'Premium Education Consultancy',
@@ -346,7 +347,7 @@ export const DESTINATIONS: DestinationItem[] = [
     slug: 'united-kingdom',
     country: 'United Kingdom',
     flagCode: 'GB',
-    image: '/src/assets/images/destination_uk_campus_1791560270604.jpg',
+    image: IMAGES.ukCampus,
     overview: 'World-renowned academic heritage, accelerated 1-year Master’s degrees, vibrant multicultural student cities, and the 2-year Graduate Route post-study work visa.',
     popularIntakes: ['September / October (Major)', 'January / February (Secondary)', 'May (Select courses)'],
     averageTuition: '£12,000 – £22,000 / year',
@@ -377,7 +378,7 @@ export const DESTINATIONS: DestinationItem[] = [
     slug: 'canada',
     country: 'Canada',
     flagCode: 'CA',
-    image: '/src/assets/images/destination_canada_campus_1791560281095.jpg',
+    image: IMAGES.canadaCampus,
     overview: 'High quality of life, welcoming multicultural society, post-graduation work permits (PGWP), and renowned public colleges and research universities.',
     popularIntakes: ['September (Fall)', 'January (Winter)', 'May (Summer)'],
     averageTuition: 'CAD $16,000 – $32,000 / year',
@@ -408,7 +409,7 @@ export const DESTINATIONS: DestinationItem[] = [
     slug: 'australia',
     country: 'Australia',
     flagCode: 'AU',
-    image: '/src/assets/images/hero_international_students_1791560239292.jpg',
+    image: IMAGES.hero,
     overview: 'World-ranked universities, high student minimum wages, pleasant climate, and clear regional study incentives with extended post-study work rights.',
     popularIntakes: ['February / March (Semester 1)', 'July / August (Semester 2)', 'November (Trimester 3)'],
     averageTuition: 'AUD $22,000 – $42,000 / year',
@@ -439,7 +440,7 @@ export const DESTINATIONS: DestinationItem[] = [
     slug: 'europe-germany',
     country: 'Europe (Germany & Ireland)',
     flagCode: 'EU',
-    image: '/src/assets/images/about_consultancy_counseling_1791560255172.jpg',
+    image: IMAGES.about,
     overview: 'High innovation hubs, English-taught Master’s degrees, low-to-moderate tuition costs, and post-study opportunities across the Schengen zone.',
     popularIntakes: ['September / October (Winter Semester)', 'March / April (Summer Semester)'],
     averageTuition: '€0 – €14,000 / year (Nominal public uni admin fees in Germany; €10k–€16k in Ireland)',
